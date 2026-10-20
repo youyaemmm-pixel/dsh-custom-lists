@@ -25,9 +25,17 @@ DeepSeek Harness 的本地界面插件。把冗长的平铺模型列表整理成
 
 安装前请备份 DSH profile 配置。不要修改应用安装包。
 
-### 通过 GitHub 安装（发布后）
+### 通过插件管理器安装
 
-此压缩包尚未关联公开仓库或市场条目。创建公开仓库后，将本目录内容放在仓库根目录，再使用所在版本 DSH 的插件管理器「从 GitHub 安装」功能，输入实际仓库地址。安装包提供主机入口及 `./client` 导出。
+本包在 `package.json` 中声明了 `dsh.bundle`（指向仓库根目录的 `cordis.patch.yml`），可用 DSH 插件管理器的「从 GitHub 安装」输入仓库地址：
+
+```text
+https://github.com/youyaemmm-pixel/dsh-custom-lists
+```
+
+仓库根目录直接包含 `package.json`、`index.js`、`client.js` 与 `cordis.patch.yml`，不需要构建步骤。
+
+安装后刷新 GUI 生效；如界面未更新，完整退出并重开 DSH。
 
 ### 本地安装（开发／测试）
 
@@ -45,7 +53,7 @@ Windows 路径需使用正确的 file URL，例如 `file:///C:/Plugins/dsh-custo
 3. 刷新原 GUI；必要时完整退出并重开 DSH。
 4. 设置左侧进入「自定义列表」确认启用和提供商归组。
 
-从市场安装的可用性依赖该市场的收录规则。本包尚未提交市场，不代表已获市场审核。
+以上本地方式只用于开发／测试，会绕过 bundle 声明直接挂载入口文件。市场收录状态以插件目录中的条目为准；收录不等于安全审查，也不会由本仓库单方面宣称。
 
 ## 示例目录
 

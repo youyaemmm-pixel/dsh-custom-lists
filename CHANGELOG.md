@@ -9,6 +9,7 @@
 - 补齐 remote.session 依赖声明，避免首次创建会话目录时缺少注入。
 - 错误隔离、错误提示、组件重试；保留官方模型选择路径。
 - 发布包仅包含通用代码与文档，不包含用户 profile 数据。
+- 补齐 `dsh.bundle` 清单及 `cordis.patch.yml`，使插件可经插件管理器／`dsh plugin add` 安装；此前仅有 `dsh.client` 不足以安装。
 
 ## Verification status
 

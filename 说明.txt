@@ -1,0 +1,6 @@
+把这 4 个文件全部拖进 GitHub 的上传页面：
+  package.json        （覆盖旧的，已加 dsh.bundle）
+  README.md           （覆盖旧的，安装说明已改）
+  CHANGELOG.md        （覆盖旧的）
+  cordis.patch.yml    （新文件，挂载声明）
+上传后点绿色的 "Commit changes"。
